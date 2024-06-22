@@ -142,9 +142,9 @@
 
                   
                   <span class="file-info-divider"></span>
-                  Modified <relative-time datetime="Sat, 22 Jun 2024 19:11:43 &#43;0800"
+                  Modified <relative-time datetime="Sat, 22 Jun 2024 19:16:24 &#43;0800"
                     class="no-wrap">
-                    Sat, 22 Jun 2024 19:11:43 &#43;0800</relative-time>
+                    Sat, 22 Jun 2024 19:16:24 &#43;0800</relative-time>
                   
                 </div>
               </div>
@@ -174,7 +174,7 @@
                         </div>
                       </div>
                     </details-menu>
-                      507 Words
+                      511 Words
                     
 
                   </div>
@@ -187,7 +187,7 @@
 
               <div class="Box-body px-5 pb-5" style="z-index: 1">
                 <article class="markdown-body entry-content container-lg"><h1 id="enumerate">enumerate</h1>
-<p>Given a fixed range, find the minimum value that suit for the question. Some questions, especially for competitive programming, ask to find the specific value. Those question can be solved by enumeration. However, doing this usually requires O(n) &ndash; linear retrieve, which can lead to time limit exceed. Therefore, using binary search is the fastest to enumerate, even though the range is pretty large.</p>
+<p>Given a fixed range, find the minimum value that suit for the question. Some questions, especially for competitive programming, ask to find the specific value. Those question can be solved by enumeration. However, doing this usually requires O(n) &ndash; linear retrieve, which can lead to time limit exceed. Therefore, using binary search is the fastest to enumerate, even the range can be large.</p>
 <h1 id="pattern">pattern</h1>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="mf">1e9</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="k">while</span> <span class="p">(</span><span class="n">l</span> <span class="o">+</span> <span class="mi">1</span> <span class="o">&lt;</span> <span class="n">r</span><span class="p">)</span> <span class="p">{</span>
@@ -252,7 +252,7 @@
 </span></span><span class="line"><span class="cl">	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><p>let&rsquo;s focus on run_case() function. The most difficult part is run() function, it simply say that</p>
-<p><code>l</code> is the minimal step that must be walked, while <code>r</code> is the maximum step that can be walked. for example, if intervals are [3, 8] and [10, 18], and start with 0 (l = 0, r = 0), we guess the k is 4, then <code>l = 3</code> and <code>r = 4</code>. It is because, in order to step into first interval, the minimal step must be 3 and the player can only walk 4 step (assume k = 4). However, to step into second interval, <code>l = 10</code> and <code>r = 8</code>. since <code>r &lt; l</code>, therefore, we assert that 4 step is not enough.</p>
+<p><code>l</code> is the minimal step that must be walked, while <code>r</code> is the maximum step that can be walked. for example, if intervals are [3, 8] and [10, 18], and start with 0 (that is, l = 0, r = 0), we guess the k is 4, then <code>l = 3</code> and <code>r = 4</code> in first loop. It is because, in order to step into first interval, the minimal step must be 3 and the player can only walk 4 step (assume k = 4). However, to step into second interval, <code>l = 10</code> and <code>r = 8</code>. since <code>r &lt; l</code>, therefore, we assert that 4 step is not enough.</p>
 <h1 id="compare-with-normal-binary-search">compare with normal binary search</h1>
 <p>The preceding pattern is a bit different from normal binary search,</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="kt">int</span> <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="mf">1e9</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">KEY</span><span class="p">;</span>
