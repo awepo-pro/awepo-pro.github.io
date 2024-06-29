@@ -6,8 +6,15 @@
     <description>Recent content on Anton</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 22 Jun 2024 19:16:24 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jun 2024 01:23:43 +0800</lastBuildDate>
     <atom:link href="https://awepo-pro.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pipenv</title>
+      <link>https://awepo-pro.github.io/post/pipenv/</link>
+      <pubDate>Sun, 30 Jun 2024 00:40:07 +0800</pubDate>
+      <guid>https://awepo-pro.github.io/post/pipenv/</guid>
+      <description>virtual environment &lt;code&gt;pipenv&lt;/code&gt; in python</description>
+    </item>
     <item>
       <title>Enumerate Range</title>
       <link>https://awepo-pro.github.io/post/enumerate-range/</link>
