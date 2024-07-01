@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Anton</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 30 Jun 2024 01:23:43 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jul 2024 02:40:18 +0800</lastBuildDate>
     <atom:link href="https://awepo-pro.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pathlib</title>
+      <link>https://awepo-pro.github.io/post/pathlib/</link>
+      <pubDate>Mon, 01 Jul 2024 23:59:03 +0800</pubDate>
+      <guid>https://awepo-pro.github.io/post/pathlib/</guid>
+      <description>a modern library of os.path</description>
+    </item>
     <item>
       <title>Pipenv</title>
       <link>https://awepo-pro.github.io/post/pipenv/</link>
