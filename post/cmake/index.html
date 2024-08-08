@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script type="application/javascript" src='https://awepo-pro.github.io/js/theme-mode.js'></script>
+    <link rel="stylesheet" href='https://awepo-pro.github.io/css/frameworks.min.css' />
+    <link rel="stylesheet" href='https://awepo-pro.github.io/css/github.min.css' />
+    <link rel="stylesheet" href='https://awepo-pro.github.io/css/github-style.css' />
+    <link rel="stylesheet" href='https://awepo-pro.github.io/css/light.css' />
+    <link rel="stylesheet" href='https://awepo-pro.github.io/css/dark.css' />
+    <link rel="stylesheet" href='https://awepo-pro.github.io/css/syntax.css' />
+    <title>Cmake - Anton</title>
+    
+    <link rel="icon" type="image/x-icon" href='/images/github.png'>
+    
+    <meta name="theme-color" content="#1e2327">
+
+    
+    <meta name="description"
+  content="cmake used to manage and build the c&#43;&#43; program. For example, there are many c&#43;&#43; source code, header files and third party library. CMake can manage and run the program.
+download for macbook, download cmake and make using
+brew install cmake make of course, this is c&#43;&#43; program, so make sure you have clang or gcc compiler!
+demo1 folder structure
+├── CMakeLists.txt └── main.cpp this is only 1 program, CMakeLists.txt is required for cmake." />
+<meta name="keywords"
+  content='blog' />
+<meta name="robots" content="noodp" />
+<link rel="canonical" href="https://awepo-pro.github.io/post/cmake/" />
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Cmake - Anton" />
+<meta name="twitter:description"
+  content="cmake used to manage and build the c&#43;&#43; program. For example, there are many c&#43;&#43; source code, header files and third party library. CMake can manage and run the program.
+download for macbook, download cmake and make using
+brew install cmake make of course, this is c&#43;&#43; program, so make sure you have clang or gcc compiler!
+demo1 folder structure
+├── CMakeLists.txt └── main.cpp this is only 1 program, CMakeLists.txt is required for cmake." />
+<meta name="twitter:site" content="https://awepo-pro.github.io/" />
+<meta name="twitter:creator" content="" />
+<meta name="twitter:image"
+  content="https://awepo-pro.github.io/">
+
+
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Cmake - Anton">
+<meta property="og:description"
+  content="cmake used to manage and build the c&#43;&#43; program. For example, there are many c&#43;&#43; source code, header files and third party library. CMake can manage and run the program.
+download for macbook, download cmake and make using
+brew install cmake make of course, this is c&#43;&#43; program, so make sure you have clang or gcc compiler!
+demo1 folder structure
+├── CMakeLists.txt └── main.cpp this is only 1 program, CMakeLists.txt is required for cmake." />
+<meta property="og:url" content="https://awepo-pro.github.io/post/cmake/" />
+<meta property="og:site_name" content="Cmake" />
+<meta property="og:image"
+  content="https://awepo-pro.github.io/">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2024-08-08 00:38:24 &#43;0800 CST" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body>
+  <div style="position: relative">
+  <header class="Header js-details-container Details px-3 px-md-4 px-lg-5 flex-wrap flex-md-nowrap open Details--on">
+    <div class="Header-item mobile-none" style="margin-top: -4px; margin-bottom: -4px;">
+      <a class="Header-link" href="https://awepo-pro.github.io/">
+        <img class="octicon" height="32" width="32" src="/images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item d-md-none">
+      <button class="Header-link btn-link js-details-target" type="button"
+        onclick="document.querySelector('#header-search').style.display = document.querySelector('#header-search').style.display == 'none'? 'block': 'none'">
+        <img height="24" class="octicon octicon-three-bars" width="24" src="/images/github-mark-white.png">
+      </button>
+    </div>
+    <div style="display: none;" id="header-search"
+      class="Header-item Header-item--full flex-column flex-md-row width-full flex-order-2 flex-md-order-none mr-0 mr-md-3 mt-3 mt-md-0 Details-content--hidden-not-important d-md-flex">
+      <div
+        class="Header-search header-search flex-auto js-site-search position-relative flex-self-stretch flex-md-self-auto mb-3 mb-md-0 mr-0 mr-md-3 scoped-search site-scoped-search js-jump-to">
+        <div class="position-relative">
+          <form target="_blank" action="https://www.google.com/search" accept-charset="UTF-8" method="get"
+            autocomplete="off">
+            <label
+              class="Header-search-label form-control input-sm header-search-wrapper p-0 js-chromeless-input-container header-search-wrapper-jump-to position-relative d-flex flex-justify-between flex-items-center">
+              <input type="text"
+                class="Header-search-input form-control input-sm header-search-input jump-to-field js-jump-to-field js-site-search-focus js-site-search-field is-clearable"
+                name="q" value="" placeholder="Search" autocomplete="off">
+              <input type="hidden" name="q" value="site:https://awepo-pro.github.io/">
+            </label>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="Header-item Header-item--full flex-justify-center d-md-none position-relative">
+      <a class="Header-link " href="https://awepo-pro.github.io/">
+        <img class="octicon octicon-mark-github v-align-middle" height="32" width="32" src="/images/github-mark-white.png">
+      </a>
+    </div>
+    <div class="Header-item" style="margin-right: 0;">
+      <a href="javascript:void(0)" class="Header-link no-select" onclick="switchTheme()">
+        <svg style="fill: var(--color-profile-color-modes-toggle-moon);" class="no-select" viewBox="0 0 16 16"
+          version="1.1" width="16" height="16">
+          <path fill-rule="evenodd" clip-rule="evenodd"
+            d="M4.52208 7.71754C7.5782 7.71754 10.0557 5.24006 10.0557 2.18394C10.0557 1.93498 10.0392 1.68986 10.0074 1.44961C9.95801 1.07727 10.3495 0.771159 10.6474 0.99992C12.1153 2.12716 13.0615 3.89999 13.0615 5.89383C13.0615 9.29958 10.3006 12.0605 6.89485 12.0605C3.95334 12.0605 1.49286 10.001 0.876728 7.24527C0.794841 6.87902 1.23668 6.65289 1.55321 6.85451C2.41106 7.40095 3.4296 7.71754 4.52208 7.71754Z">
+          </path>
+        </svg>
+      </a>
+    </div>
+  </header>
+</div>
+
+  
+<div>
+  <main>
+    <div class="gisthead pagehead bg-gray-light pb-0 pt-3 mb-4">
+      <div class="px-0">
+        <div class="mb-3 d-flex px-3 px-md-3 px-lg-5">
+          <div class="flex-auto min-width-0 width-fit mr-3">
+            <div class="d-flex">
+              <div class="d-none d-md-block">
+                <a class="avatar mr-2 flex-shrink-0" href="https://awepo-pro.github.io/">
+                  <img class=" avatar-user"
+                    src="/images/doge.jpeg"
+                    width="32" height="32"></a>
+              </div>
+              <div class="d-flex flex-column">
+                <h1 class="break-word f3 text-normal mb-md-0 mb-1">
+                  <span class="author">
+                    <a href="https://awepo-pro.github.io/">Anton</a>
+                  </span>
+                  <span class="path-divider">/</span>
+                  <strong class="css-truncate css-truncate-target mr-1" style="max-width: 410px">
+                    <a href="https://awepo-pro.github.io/post/cmake/">Cmake</a>
+                  </strong>
+                </h1>
+                <div class="note m-0">
+                  Created <relative-time datetime="Thu, 08 Aug 2024 00:38:24 &#43;0800"
+                    class="no-wrap">
+                    Thu, 08 Aug 2024 00:38:24 &#43;0800</relative-time>
+
+                  
+                  <span class="file-info-divider"></span>
+                  Modified <relative-time datetime="Fri, 09 Aug 2024 00:13:26 &#43;0800"
+                    class="no-wrap">
+                    Fri, 09 Aug 2024 00:13:26 &#43;0800</relative-time>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-lg px-3 new-discussion-timeline">
+      <div class="repository-content gist-content">
+        <div>
+          <div class="js-gist-file-update-container js-task-list-container file-box">
+            <div id="file-pytest" class="file my-2">
+              <div id="post-header" class="file-header d-flex flex-md-items-center flex-items-start sticky-header" style="z-index: 2">
+                <div class="file-info d-flex flex-md-items-center flex-items-start flex-order-1 flex-auto">
+                  <div class="text-mono f6 flex-auto pr-3 flex-order-2 flex-md-order-1 mt-2 mt-md-0">
+                    
+                    <summary id="toc-toggle" onclick="clickToc()" class="btn btn-octicon m-0 mr-2 p-2">
+                      <svg aria-hidden="true" viewBox="0 0 16 16" height="16" width="16" class="octicon octicon-list-unordered">
+                        <path fill-rule="evenodd" d="M2 4a1 1 0 100-2 1 1 0 000 2zm3.75-1.5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zm0 5a.75.75 0 000 1.5h8.5a.75.75 0 000-1.5h-8.5zM3 8a1 1 0 11-2 0 1 1 0 012 0zm-1 6a1 1 0 100-2 1 1 0 000 2z"></path>
+                      </svg>
+                    </summary>
+                    <details-menu class="SelectMenu" id="toc-details" style="display: none;">
+                      <div class="SelectMenu-modal rounded-3 mt-1" style="max-height: 340px;">
+                        <div class="SelectMenu-list SelectMenu-list--borderless p-2" style="overscroll-behavior: contain;" id="toc-list">
+                        </div>
+                      </div>
+                    </details-menu>
+                      987 Words
+                    
+
+                  </div>
+                  <div class="file-actions flex-order-2 pt-0">
+                    
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="Box-body px-5 pb-5" style="z-index: 1">
+                <article class="markdown-body entry-content container-lg"><h1 id="cmake">cmake</h1>
+<p>used to manage and build the c++ program. For example, there are many c++ source code, header files and third party library. CMake can manage and run the program.</p>
+<h1 id="download">download</h1>
+<p>for macbook, download <code>cmake</code> and <code>make</code> using</p>
+<pre tabindex="0"><code>brew install cmake make
+</code></pre><p>of course, this is c++ program, so make sure you have clang or gcc compiler!</p>
+<h1 id="demo1">demo1</h1>
+<p>folder structure</p>
+<pre tabindex="0"><code>├── CMakeLists.txt
+└── main.cpp
+</code></pre><p>this is only 1 program, <code>CMakeLists.txt</code> is required for cmake. cmake convert the code in <code>CMakeLists.txt</code> into <code>MakeFile</code> which is for <code>make</code></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="c"># CMakeLists.txt
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">cmake_minimum_required</span> <span class="p">(</span><span class="s">VERSION</span> <span class="s">3.10.0</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">project</span> <span class="p">(</span><span class="s">main</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">add_executable</span> <span class="p">(</span><span class="s">main</span> <span class="s">main.cpp</span><span class="p">)</span><span class="err">
+</span></span></span></code></pre></div><p><code>cmake_minimum_required</code> limit the minimum version of cmake to run this project. In this case, 3.10.0. The project name is called <code>main</code>, Moreover, we can specify the language and description, ie:</p>
+<pre tabindex="0"><code>project (
+	main
+	DESCRIPTION 	&#34;this is my first cmake project&#34;
+	LANGUAGES 		CXX
+)
+</code></pre><p>but those arguments are not necessary, they are just the hint for cmake to deduce the project.</p>
+<p><code>add_executable (TARGET SOURCE_CODE)</code>, in this case, the target is <code>main</code>, although the target name (which is like a variable name) is not necessary to be the same as the project name, they are usually the same. Therefore, we can use environment variable to replace <code>main</code>:</p>
+<pre tabindex="0"><code>add_executable (${PROJECT_NAME} main.cpp)
+</code></pre><h2 id="tips">tips</h2>
+<p>if you are not sure the value of variable, use <code>message()</code> function to print them out:</p>
+<pre tabindex="0"><code>message (&#34;this is ${PROJECT_NAME}&#34;)
+</code></pre><p>in this case, the message is <code>this is main</code></p>
+<h2 id="maincpp-example">main.cpp example</h2>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;hello cmake&#34;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h2 id="execute-cmake">execute cmake</h2>
+<p>the process is a bit annoying &hellip;&hellip;. be patient!</p>
+<p>create a folder which use for store the all the output that for executing the program. Then, run the cmake to render into makefile and run makefile to generate executable file. Lastly, execute the executable file</p>
+<pre tabindex="0"><code>mkdir build
+cd build
+cmake -S .. -B .
+make
+./main
+</code></pre><p><code>cmake -S .. -B .</code>, <code>-S ..</code> means the source directory is parent folder (since the all the source code, CMakeLists.txt are in parent folder). <code>-B .</code> specify the build directory. If we don&rsquo;t provide the build directory, the current directory is default. Therefore, <code>cmake -S .. -B .</code> cane be simplified to <code>cmake -S ..</code>.</p>
+<p>For sake of simplicity, we often use <code>configure.sh</code> and <code>run.sh</code> to replace manual typing.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># configure.sh</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">rm -r build
+</span></span><span class="line"><span class="cl">mkdir build
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">cmake -S .. 
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="c1"># run.sh</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> build
+</span></span><span class="line"><span class="cl">make
+</span></span><span class="line"><span class="cl">./main
+</span></span></code></pre></div><p>where <code>main</code> is the executable file.</p>
+<p>Therefore, whenever we have <code>CMakeLists.txt</code>, just need to run <code>configure.sh</code> and <code>run.sh</code>. Moreover, if there is any changes in source files, run <code>run.sh</code> apply the changes.</p>
+<h1 id="demo2">demo2</h1>
+<pre tabindex="0"><code>├── CMakeLists.txt
+├── foo.h
+└── main.cpp
+</code></pre><p>if we have a header file in the same level of directory, simply add the header with <code>#include</code> in source file:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// main.cpp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="cp">#include</span> <span class="cpf">&#34;foo.h&#34;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">foo</span><span class="o">::</span><span class="n">show</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="k">namespace</span> <span class="n">foo</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="nf">show</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;hello&#34;</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>other processes remain the same as preceding example.</p>
+<h1 id="demo3">demo3</h1>
+<pre tabindex="0"><code>├── CMakeLists.txt
+├── foo.h
+├── foo.cpp
+└── main.cpp
+</code></pre><p>consider that we want to make a library with <code>foo.h</code> and <code>foo.cpp</code> and both of them are in same level with main program. then CMakeLists.txt:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="nb">cmake_minimum_required</span> <span class="p">(</span><span class="s">VERSION</span> <span class="s">3.10</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">project</span> <span class="p">(</span><span class="s">main</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">aux_source_directory</span> <span class="p">(</span><span class="s">.</span> <span class="s">SRCS</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">add_executable</span> <span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span> <span class="o">${</span><span class="nv">SRCS</span><span class="o">}</span><span class="p">)</span><span class="err">
+</span></span></span></code></pre></div><p>we add all the source files to variable <strong>SRCS</strong>, then create executable file</p>
+<h1 id="demo4">demo4</h1>
+<pre tabindex="0"><code>├── CMakeLists.txt
+├── foo
+│	├── CMakeLists.txt
+│	├── foo.h
+│	└── foo.cpp
+└── main.cpp
+</code></pre><p>what if we separate them with a folder. It clearly show that directory in a static library (module). Therefore, our main target is to create a module and link it to the main.cpp</p>
+<pre tabindex="0"><code># foo/CMakeLists.txt
+
+cmake_minimum_required (VERSION 3.10)
+project (foo)
+
+add_library (${PROJECT_NAME} foo.cpp)
+</code></pre><pre tabindex="0"><code>CMakeLists.txt
+
+cmake_minimum_required (VERSION 3.10)
+project (main)
+
+include_directories (&#34;${CMAKE_CURRENT_SOURCE_DIR}/foo&#34;)
+add_executable (${PROJECT_NAME} main.cpp)
+
+add_subdirectory (foo)
+target_link_library (${PROJECT_NAME} foo)
+</code></pre><p><code>include_dreictories</code> ask the compiler to search header file in that path, therefore, we can <strong>#include</strong> the header file directly in main.cpp</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// main.cpp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;foo.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">foo</span><span class="o">::</span><span class="n">show</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><code>add_subdirectory</code> execute the CMakeLists.txt in directory <code>foo</code> to make it becomes a library. Then use <code>target_link_library</code> to link the module <code>foo</code> to <code>main</code></p>
+<h1 id="demo5">demo5</h1>
+<p>However, if we want to separete header files and source code into different level of directories, say</p>
+<pre tabindex="0"><code>├── CMakeLists.txt
+├── foo
+│	├── include
+│	│	└── foo.h
+│	└── src
+│	    └── foo.cpp
+└── main.cpp
+</code></pre><p>in other words, considering directory <code>foo</code> as a module (apply module concept in python), we want to import the module (foo) into main.cc. We can&rsquo;t just <code>#include</code> the relative path of <code>foo.h</code> static library in main.cc since the implementation (defined in foo.cpp) of the header file is not yet found by the compiler.</p>
+<p>we need to create a CMakeLists.txt to render the whole directory <code>foo</code> into static library (module).</p>
+<pre tabindex="0"><code>├── CMakeLists.txt
+├── foo
+│	├── CMakeLists.txt
+│	├── include
+│	│	└── foo.h
+│	└── src
+│	    └── foo.cpp
+└── main.cpp
+</code></pre><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="c"># foo/CMakeLists.txt
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">cmake_minimum_required</span> <span class="p">(</span><span class="s">VERSION</span> <span class="s">3.10</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">project</span> <span class="p">(</span><span class="s">foo</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">include_directories</span> <span class="p">(</span><span class="s">include</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">aux_source_directory</span> <span class="p">(</span><span class="s">src</span> <span class="s">LINK_SRC</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">add_library</span> <span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span> <span class="o">${</span><span class="nv">LINK_SRC</span><span class="o">}</span><span class="p">)</span><span class="err">
+</span></span></span></code></pre></div><p>in order for compiler to search header files, we need to provide the path &ndash; <code>include_directories (include)</code> tell the compiler to search header files in <code>foo/include</code> directory. <code>aux_source_directory</code> includes all the source file (*.cpp) to a variable <code>LINK_SRC</code>. Lastly, add all the source file so as to create a static library called <code>foo</code>.</p>
+<p>Since we tell the path of <code>include</code> directory to compiler, we can use <strong>#include&lt;foo.h&gt;</strong> directly in foo.cpp</p>
+<p>state the function in header file</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// foo.h
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="k">namespace</span> <span class="n">foo</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="kt">void</span> <span class="nf">show</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></div><p>define the function in source file</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// foo.cpp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;foo.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">void</span> <span class="n">foo</span><span class="o">::</span><span class="n">show</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&#34;hello cmake&#34;</span> <span class="o">&lt;&lt;</span> <span class="sc">&#39;\n&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p>in top level CMakeLists.txt, we add the whole static library (module) to the source file</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cmake" data-lang="cmake"><span class="line"><span class="cl"><span class="c"># CMakeLists.txt
+</span></span></span><span class="line"><span class="cl"><span class="c"></span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">cmake_minimum_required</span> <span class="p">(</span><span class="s">VERSION</span> <span class="s">3.10.0</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">project</span> <span class="p">(</span><span class="s">main</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">add_subdirectory</span> <span class="p">(</span><span class="s">foo</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">include_directories</span> <span class="p">(</span><span class="s2">&#34;${CMAKE_CURRENT_SOURCE_DIR}/foo/include&#34;</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">add_executable</span> <span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span> <span class="s">main.cpp</span><span class="p">)</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="nb">target_link_libraries</span> <span class="p">(</span><span class="o">${</span><span class="nv">PROJECT_NAME</span><span class="o">}</span> <span class="s">foo</span><span class="p">)</span><span class="err">
+</span></span></span></code></pre></div><p>use the function in main program</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-cpp" data-lang="cpp"><span class="line"><span class="cl"><span class="c1">// main.cpp
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="cp">#include</span> <span class="cpf">&lt;foo.h&gt;</span><span class="cp">
+</span></span></span><span class="line"><span class="cl"><span class="cp"></span>
+</span></span><span class="line"><span class="cl"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="n">foo</span><span class="o">::</span><span class="n">show</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h1 id="third-party-library">third party library</h1>
+<p>if we want to use third party library, use <code>find_package()</code> or <code>fetchContent</code> module (recommended as it is easier).</p>
+</article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+<script type="application/javascript" src='https://awepo-pro.github.io/js/toc.js'></script>
+<link rel="stylesheet" href='https://awepo-pro.github.io/css/toc.css' />
+
+
+<div id="gitalk-container" class="gitalk-container"></div>
+<link rel="stylesheet" href='https://awepo-pro.github.io/css/gitalk.css'>
+<script src='https://awepo-pro.github.io/js/gitalk.min.js'></script>
+<script>
+  const gitalk = new Gitalk({
+    clientID: 'Your client ID',
+    clientSecret: 'Your client secret',
+    repo: 'repo',
+    owner: 'MeiK2333',
+    admin: ['MeiK2333'],
+    id: eval("location.pathname"), 
+    distractionFreeMode: false 
+  });
+  (function() {
+    gitalk.render('gitalk-container');
+  })();
+</script>
+
+
+  <div class="footer container-xl width-full p-responsive">
+  <div
+    class="position-relative d-flex flex-row-reverse flex-lg-row flex-wrap flex-lg-nowrap flex-justify-center flex-lg-justify-between flex-sm-items-center pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
+    <a aria-label="Homepage" title="GitHub" class="footer-octicon d-none d-lg-block mr-lg-4" href="https://awepo-pro.github.io/">
+      <svg height="24" class="octicon octicon-mark-github" viewBox="0 0 16 16" version="1.1" width="24">
+        <path fill-rule="evenodd"
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+        </path>
+      </svg>
+    </a>
+    <ul class="list-style-none d-flex flex-wrap col-12 flex-justify-center flex-lg-justify-between mb-2 mb-lg-0">
+      
+      <li class="mr-3 mr-lg-0">Theme by <a href='https://github.com/MeiK2333/github-style'>github-style</a></li>
+      
+    </ul>
+  </div>
+  <div class="d-flex flex-justify-center pb-6">
+    <span class="f6 text-gray-light"></span>
+  </div>
+
+
+</div>
+</body>
+
+<script type="application/javascript" src="https://awepo-pro.github.io/js/github-style.js"></script>
+
+
+
+
+
+</html>
