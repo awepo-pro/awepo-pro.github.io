@@ -6,14 +6,14 @@
     <description>Recent content in Posts on Anton</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 09 Aug 2024 00:13:26 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Aug 2024 00:17:55 +0800</lastBuildDate>
     <atom:link href="https://awepo-pro.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Cmake</title>
       <link>https://awepo-pro.github.io/post/cmake/</link>
       <pubDate>Thu, 08 Aug 2024 00:38:24 +0800</pubDate>
       <guid>https://awepo-pro.github.io/post/cmake/</guid>
-      <description>cmake used to manage and build the c++ program. For example, there are many c++ source code, header files and third party library. CMake can manage and run the program.&#xA;download for macbook, download cmake and make using&#xA;brew install cmake make of course, this is c++ program, so make sure you have clang or gcc compiler!&#xA;demo1 folder structure&#xA;├── CMakeLists.txt └── main.cpp this is only 1 program, CMakeLists.txt is required for cmake.</description>
+      <description>Let&amp;rsquo;s learn cmake</description>
     </item>
     <item>
       <title>Pathlib</title>
