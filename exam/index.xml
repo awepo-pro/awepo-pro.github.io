@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Exams on ExampleSite</title>
+    <link>http://localhost:45477/exam/</link>
+    <description>Recent content in Exams on ExampleSite</description>
+    <image>
+      <title>ExampleSite</title>
+      <url>http://localhost:45477/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>http://localhost:45477/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.147.9</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 29 Jun 2025 01:36:10 +0800</lastBuildDate>
+    <atom:link href="http://localhost:45477/exam/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>C</title>
+      <link>http://localhost:45477/exam/c/</link>
+      <pubDate>Sun, 29 Jun 2025 01:36:10 +0800</pubDate>
+      <guid>http://localhost:45477/exam/c/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
