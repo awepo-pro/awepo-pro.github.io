@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Anton&#39;s Blog</title>
-    <link>https://awepo-pro.github.io/tags/</link>
+    <link>https://awepo-pro.github.io/posts/tags/</link>
     <description>Recent content in Tags on Anton&#39;s Blog</description>
     <image>
       <title>Anton&#39;s Blog</title>
-      <url>https://awepo-pro.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://awepo-pro.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://awepo-pro.github.io/posts/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://awepo-pro.github.io/posts/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.147.9</generator>
     <language>en</language>
     <lastBuildDate>Sun, 29 Jun 2025 02:03:01 +0800</lastBuildDate>
-    <atom:link href="https://awepo-pro.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://awepo-pro.github.io/posts/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>First</title>
-      <link>https://awepo-pro.github.io/tags/first/</link>
+      <link>https://awepo-pro.github.io/posts/tags/first/</link>
       <pubDate>Sun, 29 Jun 2025 02:03:01 +0800</pubDate>
-      <guid>https://awepo-pro.github.io/tags/first/</guid>
+      <guid>https://awepo-pro.github.io/posts/tags/first/</guid>
       <description></description>
     </item>
   </channel>

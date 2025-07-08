@@ -2,21 +2,21 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://awepo-pro.github.io/</loc>
-    <lastmod>2025-06-29T02:03:01+08:00</lastmod>
-  </url><url>
-    <loc>https://awepo-pro.github.io/tags/first/</loc>
-    <lastmod>2025-06-29T02:03:01+08:00</lastmod>
-  </url><url>
-    <loc>https://awepo-pro.github.io/posts/hi/</loc>
-    <lastmod>2025-06-29T02:03:01+08:00</lastmod>
-  </url><url>
     <loc>https://awepo-pro.github.io/posts/</loc>
     <lastmod>2025-06-29T02:03:01+08:00</lastmod>
   </url><url>
-    <loc>https://awepo-pro.github.io/tags/</loc>
+    <loc>https://awepo-pro.github.io/posts/tags/first/</loc>
     <lastmod>2025-06-29T02:03:01+08:00</lastmod>
   </url><url>
-    <loc>https://awepo-pro.github.io/categories/</loc>
+    <loc>https://awepo-pro.github.io/posts/posts/hi/</loc>
+    <lastmod>2025-06-29T02:03:01+08:00</lastmod>
+  </url><url>
+    <loc>https://awepo-pro.github.io/posts/posts/</loc>
+    <lastmod>2025-06-29T02:03:01+08:00</lastmod>
+  </url><url>
+    <loc>https://awepo-pro.github.io/posts/tags/</loc>
+    <lastmod>2025-06-29T02:03:01+08:00</lastmod>
+  </url><url>
+    <loc>https://awepo-pro.github.io/posts/categories/</loc>
   </url>
 </urlset>

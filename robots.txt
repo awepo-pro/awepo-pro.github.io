@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://awepo-pro.github.io/sitemap.xml
+Sitemap: https://awepo-pro.github.io/posts/sitemap.xml
