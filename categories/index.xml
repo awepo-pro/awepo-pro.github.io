@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Categories on Anton&#39;s Blog</title>
+    <title>Categories on Blog</title>
     <link>https://awepo-pro.github.io/posts/categories/</link>
-    <description>Recent content in Categories on Anton&#39;s Blog</description>
+    <description>Recent content in Categories on Blog</description>
     <image>
-      <title>Anton&#39;s Blog</title>
+      <title>Blog</title>
       <url>https://awepo-pro.github.io/posts/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
       <link>https://awepo-pro.github.io/posts/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
