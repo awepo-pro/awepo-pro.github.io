@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Blog</title>
-    <link>https://awepo-pro.github.io/posts/</link>
-    <description>Recent content in Posts on Blog</description>
+    <title>KG on Blog</title>
+    <link>https://awepo-pro.github.io/tags/kg/</link>
+    <description>Recent content in KG on Blog</description>
     <image>
       <title>Blog</title>
       <url>https://awepo-pro.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -12,7 +12,7 @@
     <generator>Hugo -- 0.147.9</generator>
     <language>en</language>
     <lastBuildDate>Mon, 01 Sep 2025 16:56:42 +0800</lastBuildDate>
-    <atom:link href="https://awepo-pro.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://awepo-pro.github.io/tags/kg/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Entity Matching</title>
       <link>https://awepo-pro.github.io/posts/entity-matching/</link>
