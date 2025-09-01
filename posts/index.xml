@@ -14,11 +14,11 @@
     <lastBuildDate>Mon, 01 Sep 2025 16:56:42 +0800</lastBuildDate>
     <atom:link href="https://awepo-pro.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Entity Matching</title>
+      <title>Entity Matching: Solving the Problem of Duplicate Entities in Knowledge Graphs</title>
       <link>https://awepo-pro.github.io/posts/entity-matching/</link>
       <pubDate>Mon, 01 Sep 2025 16:56:42 +0800</pubDate>
       <guid>https://awepo-pro.github.io/posts/entity-matching/</guid>
-      <description>This blog tells about what is entity-matching, and how did I solve this problem and publish it in my github [repo](https://github.com/awepo-pro/entity_matching)</description>
+      <description>In this blog, I’ll walk through **what entity matching is**, why it matters in knowledge graphs, and how I designed an efficient solution—available on my [GitHub repo](https://github.com/awepo-pro/entity_matching).</description>
     </item>
   </channel>
 </rss>
