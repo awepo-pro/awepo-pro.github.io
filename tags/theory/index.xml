@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Posts on Blog</title>
-    <link>https://awepo-pro.github.io/posts/</link>
-    <description>Recent content in Posts on Blog</description>
+    <title>Theory on Blog</title>
+    <link>https://awepo-pro.github.io/tags/theory/</link>
+    <description>Recent content in Theory on Blog</description>
     <image>
       <title>Blog</title>
       <url>https://awepo-pro.github.io/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
@@ -12,20 +12,13 @@
     <generator>Hugo -- 0.147.9</generator>
     <language>en</language>
     <lastBuildDate>Tue, 02 Sep 2025 11:06:32 +0800</lastBuildDate>
-    <atom:link href="https://awepo-pro.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://awepo-pro.github.io/tags/theory/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Entity Matching Theory</title>
       <link>https://awepo-pro.github.io/posts/entity-matching-theory/</link>
       <pubDate>Tue, 02 Sep 2025 11:06:32 +0800</pubDate>
       <guid>https://awepo-pro.github.io/posts/entity-matching-theory/</guid>
       <description>This blog post discusses the reasoning process I went through while addressing a particular problem in entity matching. Although libraries exist to address this task, my focus here is on the conceptual questions that arise during problem solving.</description>
-    </item>
-    <item>
-      <title>Entity Matching: Solving the Problem of Duplicate Entities in Knowledge Graphs</title>
-      <link>https://awepo-pro.github.io/posts/entity-matching/</link>
-      <pubDate>Mon, 01 Sep 2025 16:56:42 +0800</pubDate>
-      <guid>https://awepo-pro.github.io/posts/entity-matching/</guid>
-      <description>In this blog, I’ll walk through **what entity matching is**, why it matters in knowledge graphs, and how I designed an efficient solution—available on my [GitHub repo](https://github.com/awepo-pro/entity_matching).</description>
     </item>
   </channel>
 </rss>

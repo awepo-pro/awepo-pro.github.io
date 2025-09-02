@@ -18,7 +18,7 @@
       <link>https://awepo-pro.github.io/posts/entity-matching-theory/</link>
       <pubDate>Tue, 02 Sep 2025 11:06:32 +0800</pubDate>
       <guid>https://awepo-pro.github.io/posts/entity-matching-theory/</guid>
-      <description>Desc Text.</description>
+      <description>This blog post discusses the reasoning process I went through while addressing a particular problem in entity matching. Although libraries exist to address this task, my focus here is on the conceptual questions that arise during problem solving.</description>
     </item>
     <item>
       <title>Entity Matching: Solving the Problem of Duplicate Entities in Knowledge Graphs</title>
