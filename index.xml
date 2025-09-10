@@ -11,8 +11,15 @@
     </image>
     <generator>Hugo -- 0.147.9</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 02 Sep 2025 11:06:32 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Sep 2025 14:13:29 +0800</lastBuildDate>
     <atom:link href="https://awepo-pro.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LLM_api</title>
+      <link>https://awepo-pro.github.io/posts/llm_api/</link>
+      <pubDate>Wed, 10 Sep 2025 14:13:29 +0800</pubDate>
+      <guid>https://awepo-pro.github.io/posts/llm_api/</guid>
+      <description>This module lets you run multiple AI chat sessions in parallel, each with its own conversation history, and easily output results either to the console or to a file in JSON format. It’s designed to be simple: set a prompt, provide your questions, and run achat to get structured answers.</description>
+    </item>
     <item>
       <title>Entity Matching Theory</title>
       <link>https://awepo-pro.github.io/posts/entity-matching-theory/</link>
